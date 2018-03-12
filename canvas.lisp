@@ -10,7 +10,7 @@
 
 (setf *js-string-delimiter* #\")
 
-(start (make-instance 'acceptor :port 8080))
+(start (make-instance 'easy-acceptor :port 8080))
 
 (define-easy-handler (tutorial1 :uri "/tutorial1") ()
   (with-html-output-to-string (s)
