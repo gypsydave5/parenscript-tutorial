@@ -1,4 +1,6 @@
-(dolist (x '(:hunchentoot :cl-who :parenscript :cl-fad))
+(ql:quickload '(#:cl-who #:cl-fad #:hunchentoot))
+
+(dolist (x '(#:hunchentoot #:cl-who #:parenscript #:cl-fad))
   (asdf:oos 'asdf:load-op x))
 
 (defpackage #:ps-tutorial
